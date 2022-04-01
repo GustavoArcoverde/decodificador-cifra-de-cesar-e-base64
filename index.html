@@ -11,19 +11,20 @@
     <link rel="stylesheet" href="./css/media-queries.css">
 </head>
 
-<body>
+<body id="root">
     <header>
         <h1>Decodificador de Base 64 e Cifra de César</h1>
-        <form>
-            <label for="">Escolha o tipo de decodificação:</label>
-            <select name="decodificação" id="">
-                <option value="base64">Base 64</option>
-                <option value="cifraDeCesar">Cifra de César</option>
-            </select>
+        <form id="escolherTipoDeCriptografia">
+            <p>Escolha um tipo de criptografia:</p>
+            <input type="radio" name="criptografia" value="base64" id="base64">
+            <label for="">Base 64</label>
+            <input type="radio" name="criptografia" value="cifraDeCesar" id="cifraDeCesar">
+            <label for="">Cifra de César</label>
         </form>
+        <form id="incrementoCifra"></form>
     </header>
     <main>
-        <form>
+        <form id="texto">
             <label for="">Insira o texto aqui:</label>
             <input type="text">
         </form>
