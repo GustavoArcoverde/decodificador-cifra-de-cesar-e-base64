@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +8,25 @@
     <title>Decodificador</title>
     <link rel="stylesheet" href="./index.css">
 </head>
+
 <body>
-    <h1>Decodificador de Base 64 e Cifra de César</h1>
-    <form>
-        <label for="">Insira o texto aqui:</label>
-        <input type="text">
-    </form>
-    
+    <header>
+        <h1>Decodificador de Base 64 e Cifra de César</h1>
+        <form>
+            <label for="">Escolha o tipo de decodificação:</label>
+            <select name="decodificação" id="">
+                <option value="base64">Base 64</option>
+                <option value="cifraDeCesar">Cifra de César</option>
+            </select>
+        </form>
+    </header>
+    <main>
+        <form>
+            <label for="">Insira o texto aqui:</label>
+            <input type="text">
+        </form>
+    </main>
     <script src="./index.js"></script>
 </body>
+
 </html>
