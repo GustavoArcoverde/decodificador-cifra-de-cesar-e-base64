@@ -9,3 +9,4 @@ cifraDeCesar.addEventListener('click', function(){
     var incrementoCifra = document.getElementById('incrementoCifra')
     incrementoCifra.append(inputNovo)
 })
+

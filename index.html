@@ -15,7 +15,7 @@
     <header>
         <h1>Decodificador de Base 64 e Cifra de César</h1>
         <form id="escolherTipoDeCriptografia">
-            <p>Escolha um tipo de criptografia:</p>
+            <p>Escolha o tipo de criptografia:</p>
             <input type="radio" name="criptografia" value="base64" id="base64">
             <label for="">Base 64</label>
             <input type="radio" name="criptografia" value="cifraDeCesar" id="cifraDeCesar">
@@ -24,6 +24,13 @@
         <form id="incrementoCifra"></form>
     </header>
     <main>
+        <form>
+            <label for="escolha">Você deseja criptografar ou descriptografar sua mensagem?</label>
+            <select name="" id="">
+                <option value="criptografar">Criptografar</option>
+                <option value="descriptografar">Descriptografar</option>
+            </select>
+        </form>
         <form id="texto">
             <label for="">Insira o texto aqui:</label>
             <input type="text">
