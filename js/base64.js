@@ -16,13 +16,13 @@ function decodificaTexto(){
     textoFinal.innerText = textoDecodificado
 }
 
-submit.addEventListener('click', function(){
-    if(codificar.checked){
-        codificaTexto()
-    }else if(decodificar.checked){
-        decodificaTexto()
-    }else{
-        alert("Escolha uma das opções")
-    }
-})
+// submit.addEventListener('click', function(){
+//     if(codificar.checked){
+//         codificaTexto()
+//     }else if(decodificar.checked){
+//         decodificaTexto()
+//     }else{
+//         alert("Escolha uma das opções")
+//     }
+// })
 
