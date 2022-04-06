@@ -1,4 +1,5 @@
 var base64 = document.getElementById('base64')
+var select = document.getElementById('selecionarCriptografia')
 var textoFinal = document.getElementById('textoFinal')
 var submit = document.getElementById('submit')
 var codificar = document.getElementById('codificar')
@@ -16,13 +17,11 @@ function decodificaTexto(){
     textoFinal.innerText = textoDecodificado
 }
 
-// submit.addEventListener('click', function(){
-//     if(codificar.checked){
-//         codificaTexto()
-//     }else if(decodificar.checked){
-//         decodificaTexto()
-//     }else{
-//         alert("Escolha uma das opções")
-//     }
-// })
+submit.addEventListener('click', function(){
+    if(codificar.checked && select.selectedIndex == 0){
+        codificaTexto()
+    }else if(decodificar.checked && select.selectedIndex == 0){
+        decodificaTexto()
+    }
+})
 

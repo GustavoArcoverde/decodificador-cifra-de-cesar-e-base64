@@ -5,8 +5,4 @@ var header = document.header
 
 
 
-// var inputNovo = document.createElement('input');
-// inputNovo.type = 'number'
-// var incrementoCifra = document.getElementById('incrementoCifra')
-// incrementoCifra.append(inputNovo)
 

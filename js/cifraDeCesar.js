@@ -1,4 +1,6 @@
 var cc = document.getElementById('cifraDeCesar')
+var form = document.getElementById('incrementoCifra')
+var select = document.getElementById('selecionarCriptografia')
 var textoFinal = document.getElementById('textoFinal')
 var submit = document.getElementById('submit')
 var codificar = document.getElementById('codificar')
@@ -7,7 +9,15 @@ var arr = [];
 var arrComIncremento = [];
 var arrParaCharCode = [];
 var valorIncrementado = [];
-var incremento = 2;
+
+
+select.addEventListener('change', function () {
+    if (select.selectedIndex == 1) {
+        document.getElementById('inputIncremento').style.display = 'flex'
+    } else {
+        document.getElementById('inputIncremento').style.display = 'none'
+    }
+})
 
 // FUNÇÕES COMUNS
 
@@ -33,7 +43,8 @@ function transformaArrParaCharCode() {
 
 function addIncrementoCodifica() {
     transformaArrParaCharCode()
-
+    var inputIncremento = document.getElementById('inputIncremento')
+    var incremento = parseInt(inputIncremento.value)
 
     for (var j = 0; j < arrParaCharCode.length; j++) {
 
@@ -44,8 +55,11 @@ function addIncrementoCodifica() {
         } else {
             arrComIncremento.push(arrParaCharCode[j])
         }
-
+        console.log("char sem incremento: " + arrParaCharCode[j])
+        console.log("char com incremento: " + arrComIncremento[j])
+        console.log((arrParaCharCode[j] - 97 + incremento) % 26 + 97)
     }
+
 }
 
 function novoValorParaLetraCodifica() {
@@ -72,6 +86,8 @@ function resultadoCodifica() {
 
 function addIncrementoDecodifica() {
     transformaArrParaCharCode()
+    var inputIncremento = document.getElementById('inputIncremento')
+    var incremento = parseInt(inputIncremento.value)
 
     for (var j = 0; j < arrParaCharCode.length; j++) {
         if (arrParaCharCode[j] >= 97 && arrParaCharCode[j] <= 122) {
@@ -108,11 +124,9 @@ function resultadoDecodifica() {
 // SUBMIT
 
 submit.addEventListener('click', function () {
-    if (codificar.checked) {
+    if (codificar.checked && select.selectedIndex == 1) {
         resultadoCodifica()
-    } else if (decodificar.checked) {
+    } else if (decodificar.checked && select.selectedIndex == 1) {
         resultadoDecodifica()
-    } else {
-        alert("Escolha uma das opções")
     }
 })
