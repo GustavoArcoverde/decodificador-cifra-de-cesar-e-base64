@@ -13,9 +13,9 @@ var valorIncrementado = [];
 
 select.addEventListener('change', function () {
     if (select.selectedIndex == 1) {
-        document.getElementById('inputIncremento').style.display = 'flex'
+        document.getElementById('inputIncremento').style.visibility = 'visible'
     } else {
-        document.getElementById('inputIncremento').style.display = 'none'
+        document.getElementById('inputIncremento').style.visibility = 'hidden'
     }
 })
 

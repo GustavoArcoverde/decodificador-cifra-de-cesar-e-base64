@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decodificador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/media-queries.css">
@@ -13,6 +16,9 @@
 
 <body id="root">
     <header>
+        <a href="https://github.com/GustavoArcoverde" target="_blank">Github</a>
+    </header>
+    <main>
         <h1>Decodificador de Base 64 e Cifra de César</h1>
         <form id="escolherTipoDeCriptografia">
             <p>Escolha o tipo de criptografia:</p>
@@ -24,22 +30,20 @@
         <form id="incrementoCifra">
             <input type="number" id="inputIncremento">
         </form>
-    </header>
-    <main>
-        <form>
+        <form id="insiraTexto">
+            <label for="" >Insira o texto aqui:</label><br>
+            <input type="text" id="textoInicial">
+        </form>
+        <form id="radioBtns">
             <input type="radio" name="criptografia" value="codificar" id="codificar">
             <label for="">Codificar</label>
             <input type="radio" name="criptografia" value="decodificar" id="decodificar">
-            <label for="">Decodificador</label>
+            <label for="">Decodificar</label>
         </form>
-        <form>
-            <label for="">Insira o texto aqui:</label>
-            <input type="text" id="textoInicial">
-        </form>
-        <input type="button" value = "Criptografar/Descriptografar" id="submit">
-        <section>
+        <input type="button" value = "Codificar/Decodificar" id="submit">
+        <div class="div">
             <p id="textoFinal"></p>
-        </section>
+        </div>
     </main>
     <script src="./js/index.js"></script>
     <script src="./js/base64.js"></script>
